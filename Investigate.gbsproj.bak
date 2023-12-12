@@ -386,6 +386,48 @@
             "triggers": [],
             "script": [
                 {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "down"
+                        ],
+                        "override": true,
+                        "__scriptTabs": "press"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_MUSIC_STOP",
+                                "args": {},
+                                "id": "20ab1ce6-178c-45e2-a082-4ba1dc541689"
+                            }
+                        ]
+                    },
+                    "id": "b6d4f042-156c-453d-8629-7f7020c4f922"
+                },
+                {
+                    "command": "EVENT_SET_INPUT_SCRIPT",
+                    "args": {
+                        "input": [
+                            "up"
+                        ],
+                        "override": true,
+                        "__scriptTabs": "press"
+                    },
+                    "children": {
+                        "true": [
+                            {
+                                "command": "EVENT_MUSIC_PLAY",
+                                "args": {
+                                    "musicId": "6fd7c7f7-b3c9-46ef-841e-c3d13c24128f"
+                                },
+                                "id": "1c686ad6-5456-459a-a57a-8e172a231405"
+                            }
+                        ]
+                    },
+                    "id": "cecf970b-bf69-4501-a1c7-24f6a73c37bc"
+                },
+                {
                     "command": "EVENT_AWAIT_INPUT",
                     "args": {
                         "input": [
@@ -4000,8 +4042,8 @@
                             "command": "EVENT_TEXT",
                             "args": {
                                 "text": [
-                                    "Hey man whats up?",
-                                    "Wanna play some\nPokemon?"
+                                    "Juan:\nHey man whats up?",
+                                    "Juan:\nWanna play some\nPokemon?"
                                 ],
                                 "avatarId": ""
                             },
@@ -47988,7 +48030,30 @@
             ]
         }
     ],
-    "customEvents": [],
+    "customEvents": [
+        {
+            "id": "b05d2b1a-8baf-4c30-941a-ce38e1a4b5d3",
+            "name": "Music",
+            "description": "",
+            "variables": {},
+            "actors": {},
+            "symbol": "script_1",
+            "script": [
+                {
+                    "command": "EVENT_MUSIC_STOP",
+                    "args": {},
+                    "id": "9a4d226d-80e6-456c-bcab-ac0f4124efae"
+                },
+                {
+                    "command": "EVENT_MUSIC_PLAY",
+                    "args": {
+                        "musicId": "6fd7c7f7-b3c9-46ef-841e-c3d13c24128f"
+                    },
+                    "id": "aafc9929-bf4f-4edc-bedb-1bd004bd978f"
+                }
+            ]
+        }
+    ],
     "music": [
         {
             "id": "6fd7c7f7-b3c9-46ef-841e-c3d13c24128f",
@@ -48126,7 +48191,7 @@
         "showCollisions": true,
         "showConnections": true,
         "worldScrollX": 123,
-        "worldScrollY": 404,
+        "worldScrollY": 0,
         "zoom": 100,
         "customColorsEnabled": true,
         "sgbEnabled": true,
@@ -48155,8 +48220,8 @@
         "defaultUIPaletteId": "default-ui",
         "playerPaletteId": "",
         "navigatorSplitSizes": [
-            897,
-            30,
+            466,
+            205,
             30
         ],
         "showNavigator": true,
